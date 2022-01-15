@@ -1,0 +1,24 @@
+include ../mixins/card.pug
+
+.header 
+  .container
+    .menu 
+      .logo 
+        img(src="./assets/imgs/logo.png", alt="")
+        img.logo-name(src="./assets/imgs/logo-name.png", alt="")
+      .menu-item 
+        a(href="") About
+        a(href="") News
+        a(href="") Music
+        a(href="") Media
+        a(href="") Tours
+        a(href="") Contacts
+    .header-track
+      h2 New Single 
+      h1 War For Love
+      img(src="./assets/imgs/header-track.png", alt="")
+
+    .header-card  
+      +card("./assets/imgs/header-1.png", "Working on my upcoming full-lenth album that`s releasing later this year.")
+      +card("./assets/imgs/header-2.png", "Halloween vibes. Listen my new track!")
+      +card("./assets/imgs/header-3.png", "WarForLove is OUT NOW!! Stream it here!")

@@ -1,3 +1,22 @@
+@import "./reset/reset.scss";
+@import "./fonts.scss";
+@import "./components/header.scss";
+@import "./components/main.scss";
+@import "./components/footer.scss";
+@import "./components/adept.scss";
+
 html{
-    background: red;
+    font-family: 'Poppins';
+    //font-family: 'Roboto';
+}
+.container {
+    max-width: 1160px;
+    padding: 0 25px;
+    margin: 0 auto;
+    
+}
+
+body{
+   width: 100%; 
+   background: rgba(28, 27, 33, 1);
 }

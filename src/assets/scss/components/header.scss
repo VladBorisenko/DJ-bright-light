@@ -1,0 +1,101 @@
+.header{
+  background-image: url(../imgs/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  .menu{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 65px;
+  
+    .logo{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      .logo-name{
+        margin-top: 4px;
+      }
+    }
+    .menu-item{
+      display: flex;
+      gap: 56px;
+      margin-bottom: 13px;
+      a{
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        transition: 0.4s;
+      }
+
+    }
+
+    .menu-item a:hover{
+      color: rgb(255, 255, 255);
+      -webkit-text-stroke: 1px rgb(124, 124, 124);
+    }
+  }
+
+  .header-track{
+    margin-top: 320px;
+    margin-left: 2px;
+    h2{
+      font-style: bold;
+      font-size: 48px;
+      color: white;
+    }
+    h1{
+      margin: 8px 0 50px 0;
+      font-style: bold;
+      font-size: 100px;
+      color: rgba(255, 255, 255, 0);
+      -webkit-text-stroke: 1px white;
+    }
+  }
+
+  .header-card{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 130px;
+    flex-wrap: wrap;
+    .card{
+      width: calc((100% - 60px)/3);
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      img{
+        width: 100%;
+        
+        
+      }
+      p{
+        position: absolute;
+        bottom: -35%;
+
+        color: white;
+        text-align: start;
+        background: rgba(122, 102, 204, 0.7);
+        width: 100%;
+        border-radius: 20px 0;
+        padding: 21px 20px;
+        font-size: 16px;
+        font-style: normal;
+        //display: none;
+        transition: 0.1s linear;
+
+      }
+    }
+    .card:hover{
+      p{
+        display: block;
+        bottom: 0;
+      }
+
+    }
+    
+  }
+}

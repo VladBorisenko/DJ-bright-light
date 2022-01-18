@@ -1,3 +1,230 @@
-.main{
-  margin-top: 500px;
+.first-section{
+  margin-top: 364px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  
+  .tex{
+    width: calc((100% - 30px)/2);
+    color: white;
+    .title{
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      h2{
+        font-size: 48px;
+        font-style: bold;
+        color: white;
+      }
+    }
+    p{
+      margin-top: 60px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 16px;
+      font-style: normal;
+    }
+    .other-article{
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px 40px;
+      align-items: center;
+      a{
+        width: calc((100% - 40px)/2);
+        display: flex;
+        text-decoration: none;
+        color: white;
+        gap: 20px;
+        h4{
+          font-size: 18px;
+          font-weight: 600;
+          
+        }
+        
+        div{
+          width: 30px;
+          height: 30px;
+          background: rgba(122, 102, 204, 1);
+          border-radius: 10px 0 10px 0;
+        }
+      }
+      
+    }
+  }
+  .photos{
+    width: calc((100% - 30px)/2);
+    position: relative;
+    img{
+      position: absolute;
+    }
+    .front{
+      left:93px;
+      top: 58px;
+      z-index: 1;
+    }
+    .back{
+      right: 0;
+      bottom: 60px;
+      z-index: 0;
+    }
+  }
+}
+.second-section{
+  margin-top: 240px;
+  padding: 50px 80px;
+  display: flex;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 30px 0 30px 0;
+  position: relative;
+  justify-content: space-between;
+  .text{
+    position: relative;
+    img{
+      position: absolute;
+      z-index: 0;
+    }
+    p{
+      position: relative;
+      z-index: 1;
+      color: white;
+      font-size: 18px;
+      font-style: normal;
+      border-bottom: 1px solid rgb(255, 255, 255);
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+    }
+    a{
+      
+      text-decoration: none;
+      font-size: 18px;
+      color: rgba(122, 102, 204, 1);
+      font-weight: 700;
+      
+    }
+  }
+  .photo{
+    img{
+      position: absolute;
+      top: -85px;
+      right: 80px;
+    }
+  }
+}
+.track-section{
+  margin-top: 260px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  .pic{
+    width: calc((100% - 30px)/2);
+    .bg{
+      width: 510px;
+      height: 510px;
+      background: rgba(122, 102, 204, 0.3);
+      border-radius: 50%;
+      position: relative;
+      
+
+      img{
+        top: 18.9px;
+        left: 18.9px;
+        position: absolute;
+        padding: 19.8px;
+        background: rgba(122, 102, 204, 0.6);
+        border-radius: 50%;
+      }
+    }
+  }
+  .player{
+    width: calc((100% - 30px)/2);
+    .title{
+      display: flex;
+      align-items: center;
+      margin-bottom: 60px;
+      h2{
+        font-size: 48px;
+        font-style: bold;
+        color: white;
+        margin-left: 30px;
+      }
+    }
+    .track-list{
+      margin-top: 48px;
+      .track{
+        margin-top: 20px;
+        span{
+          font-size: 14px;
+          font-weight: 700;
+          color: rgba(255, 255, 255, 0.5);
+          margin-right: 18px;
+        }
+        a{
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 400;
+          color: white;
+        }
+      }
+    }
+    .follow{
+      display: flex;
+      align-items: center;
+      margin-top: 50px;
+      h3{
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+      }
+      .links{
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+        gap: 30px;
+        a{
+          text-decoration: none;
+          color: white;
+          font-size: 14px;
+          font-weight: 600;
+          .link{
+            display: flex;
+            align-items: center;
+            span{
+              margin-left: 10px;
+            }
+          } 
+        }
+      }
+    }
+  }
+}
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.img-section{
+  margin-top: 178px;
+  margin-bottom: 200px;
+  display: grid;
+  grid-template-areas:
+    'one two three four'
+    'one five five four';
+  grid-gap: 30px;
+  .five{
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    h4{
+      position: absolute;
+      font-size: 24px;
+      font-weight: 700;
+      color: rgba(122, 102, 204, 1);
+    }
+  }
 }

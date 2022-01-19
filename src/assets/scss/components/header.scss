@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  //position: relative;
   .menu{
     padding-top: 30px;
     display: flex;
@@ -43,6 +44,7 @@
     margin-top: 320px;
     margin-left: 2px;
     h2{
+      
       font-style: bold;
       font-size: 48px;
       color: white;
@@ -60,6 +62,8 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    //position: absolute;
+    //bottom: -230px;
     margin-top: 130px;
     flex-wrap: wrap;
     .card{

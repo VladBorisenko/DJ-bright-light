@@ -1,0 +1,22 @@
+include ../mixins/social-item.pug
+
+
+.container 
+  .footer 
+    .logo 
+        img(src="./assets/imgs/logo.png", alt="")
+        img.logo-name(src="./assets/imgs/logo-name.png", alt="")
+    .contacts 
+      p Artist Management:<br>EMAIL:
+      p Jake Henny<br>jake@brightlightsofficial.com
+    .social 
+      +social-item("#", "./assets/imgs/apple.svg")
+      +social-item("#", "./assets/imgs/spotify.svg")
+      +social-item("#", "./assets/imgs/inst.svg")
+      +social-item("#", "./assets/imgs/yt.svg")
+      +social-item("#", "./assets/imgs/twiter.svg")
+      +social-item("#", "./assets/imgs/fb.svg")
+    span 
+      p ©  2020 DJ bright lights.
+        
+       

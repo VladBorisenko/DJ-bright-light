@@ -1,3 +1,4 @@
+
 .first-section{
   margin-top: 364px;
   display: flex;
@@ -120,6 +121,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+  width: 100%;
   .pic{
     width: calc((100% - 30px)/2);
     .bg{

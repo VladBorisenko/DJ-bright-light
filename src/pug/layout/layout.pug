@@ -4,9 +4,21 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title DJ Bright Light
+    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
     link(rel="stylesheet" href="./assets/css/app.css")
     
   body
     include ../components/header.pug
     include ../components/main.pug
     include ../components/footer.pug
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  
+    script.
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+          },
+        });

@@ -1,7 +1,7 @@
 include ../mixins/article.pug
 include ../mixins/track.pug
 include ../mixins/link.pug
-
+include ../mixins/swiper-slide.pug
 
 
 
@@ -40,7 +40,7 @@ include ../mixins/link.pug
           |refreshing, to say the least. Her sound is perfect for radio<br>
           |but complex enough to separate her from other pop<br>
           |newcomers.”
-        a(href="https://soundcloud.com/populove") PopULove.net
+        a(href="https://soundcloud.com/populove" target="_blank") PopULove.net
       .photo 
         img(src="./assets/imgs/populove.png", alt="")
     .track-section 
@@ -62,8 +62,8 @@ include ../mixins/link.pug
         .follow 
           h3 Follow me:
           .links 
-            +link("#", "./assets/imgs/m-spotify.svg", "Spotify")
-            +link("#", "./assets/imgs/m-apple.svg", "Spotify")
+            +link("https://open.spotify.com/artist/2AoeqcUs8DySgZRJ9yV4Ou", "./assets/imgs/m-spotify.svg", "Spotify")
+            +link("https://music.apple.com/tr/artist/bright-lights/295547571", "./assets/imgs/m-apple.svg", "iTunes")
     .img-section 
       .one
         img(src="./assets/imgs/one.png", alt="")
@@ -76,5 +76,15 @@ include ../mixins/link.pug
       .five
         img(src="./assets/imgs/five.png", alt="")
         h4 EDC Las Vegas Mainstage
+    .swiper-section 
+      .swiper 
+        .swiper-wrapper
+          +swiper-slide("./assets/imgs/slide-first.png", "Chandler, AZ", "The Park at Wild Horse Pass", "Apr 02 2021", "")
+          +swiper-slide("./assets/imgs/slide-second.png", "Ibiza, IBZ", "Swag Ibiza Club", "Jul 08 2021", "")
+          +swiper-slide("./assets/imgs/slide-third.png", "Ibiza, IBZ", "El Swing Ibiza", "Jul 10 2021", "")
+      .button-next
+        img(src="./assets/imgs/arrow-r.svg", alt="")
+      .button-prev
+        img(src="./assets/imgs/arrow-l.svg", alt="")
      
     

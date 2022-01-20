@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>DJ Bright Light</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/css/app.css"/>
   </head>
   <body>
@@ -71,7 +72,7 @@
               refreshing, to say the least. Her sound is perfect for radio<br>
               but complex enough to separate her from other pop<br>
               newcomers.”
-            </p><a href="https://soundcloud.com/populove">PopULove.net</a>
+            </p><a href="https://soundcloud.com/populove" target="_blank">PopULove.net</a>
           </div>
           <div class="photo"> <img src="./assets/imgs/populove.png" alt=""/></div>
         </div>
@@ -93,9 +94,9 @@
             </div>
             <div class="follow"> 
               <h3>Follow me:</h3>
-              <div class="links"> <a href="#"> 
-                      <div class="link"><img src="./assets/imgs/m-spotify.svg" alt=""/><span>Spotify</span></div></a><a href="#"> 
-                      <div class="link"><img src="./assets/imgs/m-apple.svg" alt=""/><span>Spotify</span></div></a>
+              <div class="links"> <a href="https://open.spotify.com/artist/2AoeqcUs8DySgZRJ9yV4Ou" target="_blank"> 
+                      <div class="link"><img src="./assets/imgs/m-spotify.svg" alt=""/><span>Spotify</span></div></a><a href="https://music.apple.com/tr/artist/bright-lights/295547571" target="_blank"> 
+                      <div class="link"><img src="./assets/imgs/m-apple.svg" alt=""/><span>iTunes</span></div></a>
               </div>
             </div>
           </div>
@@ -109,6 +110,32 @@
             <h4>EDC Las Vegas Mainstage</h4>
           </div>
         </div>
+        <div class="swiper-section"> 
+          <div class="swiper"> 
+            <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./assets/imgs/slide-first.png" alt=""/>
+                    <div class="info"><span>Chandler, AZ</span>
+                      <p>The Park at Wild Horse Pass</p>
+                    </div>
+                    <div class="slide-footer"> <span>Apr 02 2021</span><a href="">tickets</a></div>
+                  </div>
+                  <div class="swiper-slide"><img src="./assets/imgs/slide-second.png" alt=""/>
+                    <div class="info"><span>Ibiza, IBZ</span>
+                      <p>Swag Ibiza Club</p>
+                    </div>
+                    <div class="slide-footer"> <span>Jul 08 2021</span><a href="">tickets</a></div>
+                  </div>
+                  <div class="swiper-slide"><img src="./assets/imgs/slide-third.png" alt=""/>
+                    <div class="info"><span>Ibiza, IBZ</span>
+                      <p>El Swing Ibiza</p>
+                    </div>
+                    <div class="slide-footer"> <span>Jul 10 2021</span><a href="">tickets</a></div>
+                  </div>
+            </div>
+          </div>
+          <div class="button-next"><img src="./assets/imgs/arrow-r.svg" alt=""/></div>
+          <div class="button-prev"><img src="./assets/imgs/arrow-l.svg" alt=""/></div>
+        </div>
       </div>
     </div>
     <div class="container"> 
@@ -118,28 +145,39 @@
           <p>Artist Management:<br>EMAIL:</p>
           <p>Jake Henny<br>jake@brightlightsofficial.com</p>
         </div>
-        <div class="social"> <a href="#">
+        <div class="social"> <a href="https://music.apple.com/tr/artist/bright-lights/295547571" target="_blank">
                 <div class="bg-circle">
                   <div class="social-item"><img src="./assets/imgs/apple.svg" alt=""/></div>
-                </div></a><a href="#">
+                </div></a><a href="https://open.spotify.com/artist/2AoeqcUs8DySgZRJ9yV4Ou" target="_blank">
                 <div class="bg-circle">
                   <div class="social-item"><img src="./assets/imgs/spotify.svg" alt=""/></div>
-                </div></a><a href="#">
+                </div></a><a href="https://www.instagram.com/brightlights333/" target="_blank">
                 <div class="bg-circle">
                   <div class="social-item"><img src="./assets/imgs/inst.svg" alt=""/></div>
-                </div></a><a href="#">
+                </div></a><a href="https://www.youtube.com/channel/UCxnI8lEwjVHYFtq7vtMZUJA" target="_blank">
                 <div class="bg-circle">
                   <div class="social-item"><img src="./assets/imgs/yt.svg" alt=""/></div>
-                </div></a><a href="#">
+                </div></a><a href="https://twitter.com/brightlights333" target="_blank">
                 <div class="bg-circle">
                   <div class="social-item"><img src="./assets/imgs/twiter.svg" alt=""/></div>
-                </div></a><a href="#">
+                </div></a><a href="https://www.facebook.com/brightlights333/about" target="_blank">
                 <div class="bg-circle">
                   <div class="social-item"><img src="./assets/imgs/fb.svg" alt=""/></div>
                 </div></a>
         </div><span> 
           <p>©  2020 DJ bright lights.</p></span>
       </div>
-    </div>
+    </div><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+          },
+        });
+    </script>
   </body>
 </html>

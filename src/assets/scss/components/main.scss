@@ -1,6 +1,6 @@
 
 .first-section{
-  margin-top: 364px;
+  margin-top: 323px;
   display: flex;
   justify-content: space-between;
   gap: 30px;
@@ -26,7 +26,7 @@
       font-style: normal;
     }
     .other-article{
-      margin-top: 60px;
+      margin-top: 67px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -49,6 +49,13 @@
           height: 30px;
           background: rgba(122, 102, 204, 1);
           border-radius: 10px 0 10px 0;
+          transition: 0.2s;
+        }
+        
+      }
+      a:hover{
+        div{
+          background: rgb(119, 247, 176);
         }
       }
       
@@ -73,7 +80,7 @@
   }
 }
 .second-section{
-  margin-top: 240px;
+  margin-top: 235px;
   padding: 50px 80px;
   display: flex;
   align-items: center;
@@ -103,7 +110,10 @@
       font-size: 18px;
       color: rgba(122, 102, 204, 1);
       font-weight: 700;
-      
+      transition: 0.2s;
+    }
+    a:hover{
+      color: rgb(119, 247, 176);
     }
   }
   .photo{
@@ -170,6 +180,10 @@
           font-size: 18px;
           font-weight: 400;
           color: white;
+          transition: 0.2s;
+        }
+        a:hover{
+          color: rgba(122, 102, 204, 1);
         }
       }
     }
@@ -192,6 +206,7 @@
           color: white;
           font-size: 14px;
           font-weight: 600;
+          transition: 0.2s;
           .link{
             display: flex;
             align-items: center;
@@ -200,10 +215,101 @@
             }
           } 
         }
+        a:hover{
+          color: rgb(119, 247, 176);
+        }
       }
     }
   }
 }
+.swiper-section{
+  position: relative;
+  display: flex;
+  align-items: center;
+  .button-next, .button-prev{
+    position: absolute;
+    z-index: 1;
+    border: 1px solid white;
+    border-radius: 10px 0 10px 0;
+    padding: 25px 10px;
+    transition: 0.2s;
+  }
+  .button-next{
+    top: 183px;
+    right: -78px;
+    
+  }
+  .button-prev{
+    left: -78px;
+    top: 183px;
+    
+  }
+  .button-next:hover, .button-prev:hover{
+    border: 1px solid rgb(119, 247, 176);
+  }
+  .button-next:active, .button-prev:active{
+    background:rgb(119, 247, 176);
+  }
+
+}
+.swiper{
+  margin-top: -25px;
+  .swiper-slide{
+    background: rgba(47, 43, 43, 1);
+    width: calc((100% - 60px)/3);
+    height: 475px;
+    border-radius: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .info{
+      padding-left: 35px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      span{
+        font-size: 18px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      p{
+        font-size: 18px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+    .slide-footer{
+      display: flex;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      span{
+        width: 48.6%;
+        padding: 18px 0;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      a{
+        text-decoration: none;
+        background: rgba(122, 102, 204, 1);
+        width: 51.4%;
+        border-radius: 30px 0 30px 0;
+        padding: 18px 0;
+        color: rgba(255, 255, 255, 1);
+        transition: 0.2s;
+      }
+      a:hover{
+        color: rgb(0, 0, 0);
+        
+      }
+      a:active{
+        background: rgb(119, 247, 176);
+      }
+    }
+  }
+  
+}
+
 .one { grid-area: one; }
 .two { grid-area: two; }
 .three { grid-area: three; }

@@ -1,0 +1,9 @@
+mixin swiper-slide(img, city, place, date, href)
+  .swiper-slide
+    img(src=img, alt="")
+    .info
+      span=city
+      p=place
+    .slide-footer 
+      span=date
+      a(href=href) tickets

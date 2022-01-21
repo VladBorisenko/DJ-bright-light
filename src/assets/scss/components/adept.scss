@@ -1,0 +1,164 @@
+@media (max-width:1280px){
+  .container {
+    margin: 0 auto;
+    
+}
+  .swiper-section{
+    display: none;
+  }
+  
+  .header-track{
+    
+    img{
+      display: none;
+    }
+  }
+}
+
+@media (max-width:1160px){
+  .container{
+    width: 1000px;
+    .menu{
+      .menu-item{
+        display: flex;
+        gap: 30px;
+        margin-bottom: 13px;
+        a{
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 600;
+          transition: 0.4s;
+        }
+
+      }
+    }
+  }
+  .img-section{
+    max-width: 540px;
+    margin: 0 auto;
+    margin-top: 100px;
+    grid-template-areas:
+      'one four'
+      'one four'
+      'five five'
+      'two three';
+  }
+  
+  .first-section{
+    margin-top: 200px;
+    .tex{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .title{
+        padding-left: 100px;
+      }
+    }
+    p{
+      margin-top: 30px;
+      font-size: 23px;
+    } 
+    .photos{
+      display: none;
+    }
+  }
+  .second-section{
+    padding: 10px;
+    .text{
+      position: relative;
+      border-radius: 30px 0 30px 0;
+      text-align: center;
+      width: 70%;
+      p{
+        font-size: 20px;
+        
+      }
+      img{
+        position: absolute;
+        top: 20;
+        left: 40;
+      }
+    }
+    .photo{
+      width: 30%;
+      img{
+        position: static;
+        width: 100%;
+      }
+    }
+  }
+  .track-section{
+    .pic{
+      
+      .bg{
+        width: 410px;
+        height: 410px;
+        img{
+          width: 374px;
+          height: 374px;
+        }
+      }
+    }
+
+    .player{
+      img{
+        display: none;
+      }
+      .title{
+        img{
+          display: inline;
+        }
+      }
+      .track-list{
+        .track{
+          span{
+            font-size: 20px;
+          }
+          a{
+            font-size: 25px;
+          }
+        }
+      }
+      .follow{
+        
+        h3{
+          font-size: 28px;
+          
+        }
+        .links{
+          margin-left: 40px;
+          a{
+            
+            font-size: 18px;
+            
+            .link{
+              
+              img{
+                display: inline;
+                width: 40px;
+                height: 40px;
+              }
+            } 
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1000px){
+  .header{
+    .container{
+      .header-card{
+        display: none;
+      }
+    }
+  }
+
+
+
+
+
+
+}

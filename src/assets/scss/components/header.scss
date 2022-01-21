@@ -1,9 +1,11 @@
 .header{
+  
+  width: 100%;
   background-image: url(../imgs/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1000px;
-  //position: relative;
+  max-height: 1000px;
+  
   .menu{
     padding-top: 30px;
     display: flex;
@@ -39,6 +41,7 @@
       
     }
   }
+  
 
   .header-track{
     margin-top: 320px;
@@ -65,7 +68,8 @@
     //position: absolute;
     //bottom: -230px;
     margin-top: 130px;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
+    max-width: 100%;
     .card{
       width: calc((100% - 60px)/3);
       position: relative;
@@ -78,7 +82,7 @@
       }
       p{
         position: absolute;
-        bottom: -35%;
+        bottom: -50%;
 
         color: white;
         text-align: start;

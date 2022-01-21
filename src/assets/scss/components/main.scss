@@ -5,7 +5,7 @@
   justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
-  
+  width: 100%;
   .tex{
     width: calc((100% - 30px)/2);
     color: white;
@@ -145,8 +145,11 @@
       
 
       img{
-        top: 18.9px;
-        left: 18.9px;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
         position: absolute;
         padding: 19.8px;
         background: rgba(122, 102, 204, 0.6);
@@ -156,6 +159,7 @@
   }
   .player{
     width: calc((100% - 30px)/2);
+    
     .title{
       display: flex;
       align-items: center;
@@ -325,6 +329,7 @@
     'one two three four'
     'one five five four';
   grid-gap: 30px;
+  width: 100%;
   .five{
     position: relative;
     align-items: center;

@@ -1,23 +1,81 @@
 @media (max-width:1280px){
   .container {
     margin: 0 auto;
+    width: 1100px;
     
 }
-  .swiper-section{
-    display: none;
-  }
   
+  .img-section{
+    max-width: 540px;
+    margin: 0 auto;
+    margin-top: 100px;
+    grid-template-areas:
+      'one four'
+      'one four'
+      'five five'
+      'two three';
+  }
+  .swiper{
+    margin-top: 100px;
+    .swiper-slide{
+      height: 460px;
+    }
+  }
+  .swiper-section{
+    .button-next, .button-prev{
+      padding: 25px 10px;
+      
+    }
+    .button-next{
+      top: 320px;
+      right: -45px;
+    }
+    .button-prev{
+      top: 320px;
+      left: -45px;
+    }
+  
+  }
   .header-track{
     
     img{
-      display: none;
+      width: 100%;
+    }
+  }
+  .first-section{
+    margin-top: 200px;
+    .tex{
+      p{
+        margin-top: 30px;
+        font-size: 15px;
+      } 
+      .other-article{
+        a{
+          h4{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .photos{
+      .back{
+        bottom: 20px;
+      }
+    }
+  }
+  .track-section{
+    .player{
+      .time-line{
+        width: 100%;
+      }
     }
   }
 }
 
-@media (max-width:1160px){
+
+@media (max-width:1159.75px){
   .container{
-    width: 1000px;
+    width: 965px;
     .menu{
       .menu-item{
         display: flex;
@@ -35,7 +93,7 @@
     }
   }
   .img-section{
-    max-width: 540px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 100px;
     grid-template-areas:
@@ -48,22 +106,41 @@
   .first-section{
     margin-top: 200px;
     .tex{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
       .title{
-        padding-left: 100px;
+        
+        h2{
+          font-size: 35px;
+        }
+      }
+      p{
+        margin-top: 30px;
+        font-size: 13px;
+      } 
+      .other-article{
+        a{
+          h4{
+            font-size: 13px;
+          }
+        }
       }
     }
-    p{
-      margin-top: 30px;
-      font-size: 23px;
-    } 
+    
     .photos{
-      display: none;
+      img{
+        width: 300px;
+      }
+      .front{
+        left:20px;
+        top: 30px;
+      }
+      .back{
+        right: 50px;
+        top: 90px;
+      }
     }
   }
   .second-section{
+    margin-top: 100px;
     padding: 10px;
     .text{
       position: relative;
@@ -89,6 +166,7 @@
     }
   }
   .track-section{
+    margin-top: 100px;
     .pic{
       
       .bg{
@@ -113,29 +191,24 @@
       .track-list{
         .track{
           span{
-            font-size: 20px;
+            font-size: 15px;
           }
           a{
-            font-size: 25px;
+            font-size: 18px;
           }
         }
       }
       .follow{
-        
         h3{
-          font-size: 28px;
-          
+          font-size: 25px;
         }
         .links{
-          margin-left: 40px;
+          margin-left: 25px;
           a{
-            
-            font-size: 18px;
-            
+            font-size: 15px;
             .link{
-              
               img{
-                display: inline;
+                display: flex;
                 width: 40px;
                 height: 40px;
               }
@@ -145,20 +218,377 @@
       }
     }
   }
+  .swiper{
+    margin-top: 100px;
+    .swiper-slide{
+      height: 424px;
+    }
+  }
+  .swiper-section{
+    .button-next, .button-prev{
+      padding: 15px 5px;
+      
+    }
+    .button-next{
+      top: 300px;
+      right: -35px;
+    }
+    .button-prev{
+      top: 300px;
+      left: -35px;
+    }
+  }
 }
 
-@media (max-width:1000px){
+@media (max-width:991.75px){
+  .container{
+    width: 768px;
+  }
   .header{
-    .container{
-      .header-card{
-        display: none;
+    max-height: 600px;
+    .menu{
+      gap: 30px;
+      .menu-item{
+        gap: 30px;
+        a{
+          font-size: 15px;
+        }
+      }
+    }
+    .header-track{
+      margin-top: 80px;
+      h2{
+        font-size: 40px;
+      }
+      h1{
+        margin: 5px 0 20px 0;
+        font-size: 80px;
+      }
+    }
+    .header-card{
+      margin-top: 80px;
+      .card{
+        p{
+          padding: 21px 15px;
+          font-size: 10px;
+        }
       }
     }
   }
+  .first-section{
+    margin-top: 200px;
+    gap: 0;
+    justify-content: inherit;
+    width: 100%;
+    .tex{
+      width: 63%;
+      .title{
+        h2{
+          font-size: 35px;
+        }
+      }
+      p{
+        margin-top: 30px;
+        font-size: 13px;
+        white-space: nowrap;
+      } 
+      .other-article{
+        gap: 20px 10px;
+        a{
+          align-items: center;
+          h4{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .photos{
+      width: 37%;
+      img{
+        width: 200px;
+      }
+      .front{
+        left: 1px;
+        top: 30px;
+      }
+      .back{
+        right: 20px;
+        top: 90px;
+      }
+    }
+  }
+  .second-section{
+    .text{
+      p{
+        font-size: 17px;
+      }
+      
+    }
+    
+  }
+  .swiper{
+    .swiper-slide{
+      height: 338px;
+      .info{
+        span{
+          font-size: 15px;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+      .slide-footer{
+        font-size: 14px;
+        span{
+          padding: 10px 0;
+        }
+        a{
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+  .swiper-section{
+    .button-next, .button-prev{
+      padding: 10px 3px;
+      img{
+        width: 15px;
+      }
+    }
+    .button-next{
+      top: 270px;
+      right: -25px;
+    }
+    .button-prev{
+      top: 270px;
+      left: -25px;
+    }
+  }
+  .track-section{
+    .pic{
+      .bg{
+        width: 340px;
+        height: 340px;
+        img{
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+    .player{
+      img{
+        display: block;
+      }
+      .title{
+        img{
+          display: inline;
+        }
+        h2{
+          font-size: 40px;
+          margin-left: 20px;
+        }
+      }
+      .track-list{
+        .track{
+          span{
+            font-size: 15px;
+          }
+          a{
+            font-size: 15px;
+          }
+        }
+      }
+      .follow{
+        
+        h3{
+          font-size: 25px;
+        }
+        .links{
+          margin-left: 10px;
+          gap: 15px;
+          a{
+            font-size: 14px;
+            .link{
+              span{
+                margin-left: 5px;
+              }
+              img{
+                display: inline;
+                width: 30px;
+                height: 30px;
+              }
+            } 
+          }
+        }
+      }
+    }
+  }
+  .footer{
+    gap: 30px;
+    span{
+      padding: 10px 0 20px 0;
+    }
+  }
+}
 
-
-
-
-
-
+@media (max-width:767.75px){
+  .container{
+    width: 576px;
+    
+  }
+  .swiper{
+    margin-top: 100px;
+    .swiper-slide{
+      height: 366px;
+    }
+  }
+  .swiper-section{
+    .button-next, .button-prev{
+      padding: 15px 5px;
+      img{
+        width: 20px;
+      }
+    }
+    .button-next{
+      top: 300px;
+      right: -20px;
+    }
+    .button-prev{
+      top: 300px;
+      left: -20px;
+    }
+  }
+  .header{
+    max-height: 450px;
+    .menu{
+      flex-direction: column;
+      gap: 15px;
+      padding-top: 15px;
+      .menu-item{
+        gap: 30px;
+        a{
+          font-size: 15px;
+        }
+      }
+    }
+    .header-track{
+      margin-top: 30px;
+      h2{
+        font-size: 30px;
+      }
+      h1{
+        margin: 5px 0 20px 0;
+        font-size: 60px;
+      }
+    }
+    .header-card{
+      margin-top: 50px;
+      .card{
+        p{
+          padding: 10px 8px;
+          font-size: 10px;
+          bottom: -55%;
+        }
+      }
+    }
+  }
+  .first-section{
+    margin-top: 150px;
+    .tex{
+      width: 100%;
+      .title{
+        h2{
+          font-size: 40px;
+        }
+      }
+      p{
+        margin-top: 30px;
+        font-size: 15px;
+        white-space: normal;
+      } 
+    }
+    .photos{
+      display: none;
+    }
+  }
+  .second-section{
+    .text{
+      p{
+        font-size: 12px;
+      }
+      
+    }
+    
+  }
+  .track-section{
+    .pic{
+      display: none;
+    }
+    .player{
+      padding: 0 30px;
+      width: 100%;
+      img{
+        display: block;
+      }
+    }
+  }
+}
+@media (max-width:575.75px){
+  .container{
+    width: 350px;
+  }
+  .swiper{
+    margin-top: 100px;
+    .swiper-slide{
+      height: 338px;
+      .info{
+        padding-left: 25px;
+        
+        span{
+          font-size: 15px;
+          font-weight: 700;
+          color: rgba(255, 255, 255, 0.5);
+        }
+        p{
+          font-size: 12px;
+          font-weight: 500;
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+      .slide-footer{
+        display: flex;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+        span{
+          width: 48.6%;
+          padding: 10px 0;
+          color: rgba(255, 255, 255, 0.5);
+        }
+        a{
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+  .swiper-section{
+    .button-next, .button-prev{
+      padding: 10px 3px;
+      img{
+        width: 15px;
+      }
+    }
+    .button-next{
+      top: 270px;
+      right: -25px;
+    }
+    .button-prev{
+      top: 270px;
+      left: -25px;
+    }
+  }
+}
+@media (max-width:350px){
+  
 }

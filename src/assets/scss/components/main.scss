@@ -229,6 +229,7 @@
   }
 }
 .swiper-section{
+  
   position: relative;
   display: flex;
   align-items: center;
@@ -262,7 +263,7 @@
   margin-top: -25px;
   .swiper-slide{
     background: rgba(47, 43, 43, 1);
-    width: calc((100% - 60px)/3);
+    max-width: 350px;
     height: 475px;
     border-radius: 30px 0 30px 0;
     display: flex;
@@ -330,6 +331,9 @@
     'one five five four';
   grid-gap: 30px;
   width: 100%;
+  img{
+    width: 100%;
+  }
   .five{
     position: relative;
     align-items: center;

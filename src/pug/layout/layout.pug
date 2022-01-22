@@ -12,13 +12,27 @@ html(lang="en")
     include ../components/main.pug
     include ../components/footer.pug
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
-    script
+    script.
       const swiper = new Swiper(".swiper", {
         loop: true,
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 30,
         navigation: {
           nextEl: ".button-next",
           prevEl: ".button-prev",
+        },
+        breakpoints: {
+          
+         
+          767.75: {
+            spaceBetween: 30,
+            slidesPerView: 3,
           },
-        });
+          1: {
+            spaceBetween: 15,
+            slidesPerView: 2,
+          },
+        }
+        
+      });
+      

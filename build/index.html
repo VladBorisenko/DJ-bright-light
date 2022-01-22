@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./assets/css/app.css"/>
   </head>
   <body>
-    <div class="header"> 
-      <div class="container">
+    <div class="header">
+      <div class="container"> 
         <div class="menu"> 
           <div class="logo"> <img src="./assets/imgs/logo.png" alt=""/><img class="logo-name" src="./assets/imgs/logo-name.png" alt=""/></div>
           <div class="menu-item"> <a href="">About</a><a href="">News</a><a href="">Music</a><a href="">Media</a><a href="">Tours</a><a href="">Contacts</a></div>
@@ -83,7 +83,7 @@
           <div class="player"> 
             <div class="title"><img src="./assets/imgs/visual.png" alt=""/>
               <h2>Last tracks</h2>
-            </div><img src="./assets/imgs/main-track.png" alt=""/>
+            </div><img class="time-line" src="./assets/imgs/main-track.png" alt=""/>
             <div class="track-list"> 
                   <div class="track"><span>01</span><a href="#">3LAU, Bright Lights — How You Love Me</a></div>
                   <div class="track"><span>02</span><a href="#">Bright Lights, Kaleena Zanders, Kandy — War For Love</a></div>
@@ -110,7 +110,7 @@
             <h4>EDC Las Vegas Mainstage</h4>
           </div>
         </div>
-        <div class="swiper-section"> 
+        <div class="swiper-section">
           <div class="swiper"> 
             <div class="swiper-wrapper">
                   <div class="swiper-slide"><img src="./assets/imgs/slide-first.png" alt=""/>
@@ -167,7 +167,7 @@
         </div><span> 
           <p>©  2020 DJ bright lights.</p></span>
       </div>
-    </div><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  
+    </div><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
     <script>
       const swiper = new Swiper(".swiper", {
         loop: true,
@@ -176,20 +176,21 @@
         navigation: {
           nextEl: ".button-next",
           prevEl: ".button-prev",
+        },
+        breakpoints: {
+          
+         
+          767.75: {
+            spaceBetween: 30,
+            slidesPerView: 3,
           },
-        });
-      
-    </script>
-    <script>
-      const swiper = new Swiper(".swiper", {
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: 30,
-        navigation: {
-          nextEl: ".button-next",
-          prevEl: ".button-prev",
+          1: {
+            spaceBetween: 15,
+            slidesPerView: 2,
           },
-        });
+        }
+        
+      });
     </script>
   </body>
 </html>

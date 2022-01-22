@@ -45,6 +45,12 @@ function images() {
         .pipe(browserSync.stream())
 }
 
+function images() {
+    return gulp.src('src/assets/audio/**/*')
+        .pipe(gulp.dest('build/assets/audio'))
+        .pipe(browserSync.stream())
+}
+
 function watcher() {
     gulp.watch('src/assets/imgs/**/*', images)
     gulp.watch('src/assets/scss/**/*', css)

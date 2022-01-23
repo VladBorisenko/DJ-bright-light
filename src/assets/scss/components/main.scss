@@ -306,7 +306,7 @@
         transition: 0.2s;
       }
       a:hover{
-        color: rgb(0, 0, 0);
+        color: rgb(119, 247, 176);
         
       }
       a:active{
@@ -344,6 +344,11 @@
       font-size: 24px;
       font-weight: 700;
       color: rgba(122, 102, 204, 1);
+      transition: 0.2s;
+    }
+
+    h4:hover{
+      color: rgb(119, 247, 176);
     }
   }
 }

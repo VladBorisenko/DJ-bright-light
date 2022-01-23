@@ -45,7 +45,7 @@ function images() {
         .pipe(browserSync.stream())
 }
 
-function images() {
+function audio() {
     return gulp.src('src/assets/audio/**/*')
         .pipe(gulp.dest('build/assets/audio'))
         .pipe(browserSync.stream())
@@ -59,7 +59,7 @@ function watcher() {
 
 gulp.task(
     'default',
-    gulp.parallel(browsersync, watcher, css, html, images)
+    gulp.parallel(browsersync, watcher, css, html, images, audio)
 );
 
 

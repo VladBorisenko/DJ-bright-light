@@ -159,7 +159,54 @@
   }
   .player{
     width: calc((100% - 30px)/2);
-    
+    audio{
+      display: none;
+    }
+    .controls{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .audio-track {
+        width: 100%;
+        height: 3px;
+        background-color: #dddddd;
+        margin: 20px 0
+      }
+     
+      .time {
+        width: 0;
+        height: 3px;
+        background-color: #7A66CC
+      }
+      .play{
+        background-image: url(../imgs/play.png);
+        border: none;
+        width: 22px;
+        height: 25px;
+        display: block;
+      }
+      .pause{
+        background-image: url(../imgs/pause.png);
+        border: none;
+        width: 22px;
+        height: 25px;
+        display: none;
+      }
+      .next{
+        background-image: url(../imgs/next.png);
+        border: none;
+        width: 22px;
+        height: 25px;
+        display: block;
+      }
+      .prev{
+        background-image: url(../imgs/prev.png);
+        border: none;
+        width: 22px;
+        height: 25px;
+        display: block;
+      }
+    }
     .title{
       display: flex;
       align-items: center;
@@ -173,6 +220,11 @@
     }
     .track-list{
       margin-top: 48px;
+      .track:nth-child(4){
+        a{color: aqua;}
+      }
+      
+    }
       .track{
         margin-top: 20px;
         span{
@@ -192,42 +244,42 @@
           color: rgba(122, 102, 204, 1);
         }
       }
+  }
+  .follow{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    h3{
+      font-size: 24px;
+      font-weight: 600;
+      color: white;
     }
-    .follow{
+    .links{
       display: flex;
       align-items: center;
-      margin-top: 50px;
-      h3{
-        font-size: 24px;
-        font-weight: 600;
+      margin-left: 40px;
+      gap: 30px;
+      a{
+        text-decoration: none;
         color: white;
+        font-size: 14px;
+        font-weight: 600;
+        transition: 0.2s;
+        .link{
+          display: flex;
+          align-items: center;
+          span{
+            margin-left: 10px;
+          }
+        } 
       }
-      .links{
-        display: flex;
-        align-items: center;
-        margin-left: 40px;
-        gap: 30px;
-        a{
-          text-decoration: none;
-          color: white;
-          font-size: 14px;
-          font-weight: 600;
-          transition: 0.2s;
-          .link{
-            display: flex;
-            align-items: center;
-            span{
-              margin-left: 10px;
-            }
-          } 
-        }
         a:hover{
           color: rgb(119, 247, 176);
         }
-      }
     }
   }
 }
+
 .swiper-section{
   
   position: relative;

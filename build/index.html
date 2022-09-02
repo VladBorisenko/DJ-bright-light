@@ -17,7 +17,17 @@
         </div>
         <div class="header-track">
           <h2>New Single </h2>
-          <h1>War For Love</h1><img src="./assets/imgs/header-track.png" alt=""/>
+          <h1>War For Love</h1>
+          <audio class="h-aud" src="./assets/audio/war-love.mp3" controls="controls"></audio>
+          <div class="controls"> 
+            <button class="h-play"></button>
+            <button class="h-pause"></button>
+            <button class="h-prev"> </button>
+            <button class="h-next"> </button>
+            <div class="h-audio-track">
+              <div class="h-time"></div>
+            </div>
+          </div>
         </div>
         <div class="header-card"> <a href="#"> 
                 <div class="card"><img src="./assets/imgs/header-1.png" alt=""/>
@@ -83,10 +93,20 @@
           <div class="player"> 
             <div class="title"><img src="./assets/imgs/visual.png" alt=""/>
               <h2>Last tracks</h2>
-            </div><img class="time-line" src="./assets/imgs/main-track.png" alt=""/>
+            </div>
+            <audio class="aud" src="./assets/audio/war-love.mp3" controls="controls"></audio>
+            <div class="controls"> 
+              <button class="play"></button>
+              <button class="pause"></button>
+              <button class="prev"> </button>
+              <button class="next"> </button>
+              <div class="audio-track">
+                <div class="time"></div>
+              </div>
+            </div>
             <div class="track-list"> 
-                  <div class="track"><span>01</span><a href="#">3LAU, Bright Lights — How You Love Me</a></div>
-                  <div class="track"><span>02</span><a href="#">Bright Lights, Kaleena Zanders, Kandy — War For Love</a></div>
+                  <div class="track"><span>01</span><a href="#">Bright Lights, Kaleena Zanders, Kandy — War For Love</a></div>
+                  <div class="track"><span>02</span><a href="#">3LAU, Bright Lights — How You Love Me</a></div>
                   <div class="track"><span>03</span><a href="#">Pink Is Punk, Benny Benassi, Bright Lights — Ghost</a></div>
                   <div class="track"><span>04</span><a href="#">Hardwell, Dyro, Bright Lights — Never Say Goodbye</a></div>
                   <div class="track"><span>05</span><a href="#">Zeds Dead, Dirtyphonics, Bright Lights — Where Are You Now</a></div>
@@ -169,7 +189,22 @@
       </div>
     </div><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
     <script>
-      const swiper = new Swiper(".swiper", {
+        const Haudio = document.querySelector(".h-aud");    
+        const Htime = document.querySelector(".h-time");      
+        const HbtnPlay = document.querySelector(".h-play");   
+        const HbtnPause = document.querySelector(".h-pause"); 
+        const HbtnPrev = document.querySelector(".h-prev");   
+        const HbtnNext = document.querySelector(".h-next"); 
+        const audio = document.querySelector(".aud");    
+        const time = document.querySelector(".time");      
+        const btnPlay = document.querySelector(".play");   
+        const btnPause = document.querySelector(".pause"); 
+        const btnPrev = document.querySelector(".prev");   
+        const btnNext = document.querySelector(".next");
+        const first = document.querySelector(".track:nth-child(1)");
+      
+      
+        const swiper = new Swiper(".swiper", {
         loop: true,
         slidesPerView: 3,
         spaceBetween: 30,
@@ -191,6 +226,192 @@
         }
         
       });
+            // Массив с названиями песен
+        let Hplaylist = [
+            'war-love.mp3',
+            'love-me.mp3',
+            'ghost.mp3',
+            'n-say-goodbye.mp3',
+            'now.mp3',
+            'follow.mp3',
+            
+        ];
+      
+        let Htreck; // Переменная с индексом трека
+        
+        HbtnPlay.addEventListener("click", function() {
+          HbtnPlay.style.display='none'
+          HbtnPause.style.display='block'
+        });
+        HbtnPause.addEventListener("click", function() {
+          HbtnPlay.style.display='block'
+          HbtnPause.style.display='none'
+        });
+        // Событие перед загрузкой страницы
+        window.onload = function() {
+            Htreck = 0; // Присваиваем переменной ноль
+        }
+      
+      
+        function switchTreck (HnumTreck) {
+        // Меняем значение атрибута src
+        Haudio.src = '../assets/audio/' + Hplaylist[HnumTreck];
+        // Назначаем время песни ноль
+        Haudio.currentTime = 0;
+        // Включаем песню
+        Haudio.play();
+        }
+      
+        HbtnPlay.addEventListener("click", function() {
+          Haudio.play(); // Запуск песни
+          // Запуск интервала 
+          
+          HaudioPlay = setInterval(function() {
+              // Получаем значение на какой секунде песня
+              let HaudioTime = Math.round(Haudio.currentTime);
+              // Получаем всё время песни
+              let HaudioLength = Math.round(Haudio.duration)
+              // Назначаем ширину элементу time
+              Htime.style.width = (HaudioTime * 100) / HaudioLength + '%';
+              // Сравниваем, на какой секунде сейчас трек и всего сколько времени длится
+              // И проверяем что переменная treck меньше четырёх
+              if (HaudioTime == HaudioLength && Htreck < 5) {
+                  Htreck++; // То Увеличиваем переменную 
+                  switchTreck(treck); // Меняем трек
+              // Иначе проверяем тоже самое, но переменная treck больше или равна четырём
+              } else if (HaudioTime == HaudioLength && Htreck >= 5) {
+                  Htreck = 0; // То присваиваем treck ноль
+                  switchTreck(Htreck); // Меняем трек
+              }
+            }, 10)
+        });
+      
+      
+        HbtnPause.addEventListener("click", function() {
+          Haudio.pause(); // Останавливает песню
+          clearInterval(HaudioPlay) // Останавливает интервал
+        });
+      
+      
+        HbtnPrev.addEventListener("click", function() {
+              // Проверяем что переменная treck больше нуля
+              if (Htreck > 0) {
+                  Htreck--; // Если верно, то уменьшаем переменную на один
+                  switchTreck(Htreck); // Меняем песню.
+              } else { // Иначе
+                  Htreck = 5; // Присваиваем три
+                  switchTreck(Htreck); // Меняем песню
+              }
+          });
+      
+      
+        HbtnNext.addEventListener("click", function() {
+            // Проверяем что переменная treck больше трёх
+            if (Htreck < 5) { // Если да, то
+                Htreck++; // Увеличиваем её на один
+                switchTreck(Htreck); // Меняем песню 
+            } else { // Иначе
+                Htreck = 0; // Присваиваем ей ноль
+                switchTreck(Htreck); // Меняем песню
+            }
+        });
+      
+        //-----------------------------------------------------------------
+      
+        // Массив с названиями песен
+        let playlist = [
+            'war-love.mp3',
+            'love-me.mp3',
+            'ghost.mp3',
+            'n-say-goodbye.mp3',
+            'now.mp3',
+            'follow.mp3',
+            
+        ];
+      
+        let treck; // Переменная с индексом трека
+        
+        btnPlay.addEventListener("click", function() {
+          btnPlay.style.display='none'
+          btnPause.style.display='block'
+        });
+        btnPause.addEventListener("click", function() {
+          btnPlay.style.display='block'
+          btnPause.style.display='none'
+        });
+        // Событие перед загрузкой страницы
+        window.onload = function() {
+            treck = 0; // Присваиваем переменной ноль
+        }
+      
+      
+        function switchTreck (numTreck) {
+        // Меняем значение атрибута src
+        audio.src = '../assets/audio/' + playlist[numTreck];
+        // Назначаем время песни ноль
+        audio.currentTime = 0;
+        // Включаем песню
+        audio.play();
+        }
+      
+        btnPlay.addEventListener("click", function() {
+          audio.play(); // Запуск песни
+          // Запуск интервала 
+          
+          audioPlay = setInterval(function() {
+              // Получаем значение на какой секунде песня
+              let audioTime = Math.round(audio.currentTime);
+              // Получаем всё время песни
+              let audioLength = Math.round(audio.duration)
+              // Назначаем ширину элементу time
+              time.style.width = (audioTime * 100) / audioLength + '%';
+              // Сравниваем, на какой секунде сейчас трек и всего сколько времени длится
+              // И проверяем что переменная treck меньше четырёх
+              if (audioTime == audioLength && treck < 5) {
+                  treck++; // То Увеличиваем переменную 
+                  switchTreck(treck); // Меняем трек
+              // Иначе проверяем тоже самое, но переменная treck больше или равна четырём
+              } else if (audioTime == audioLength && treck >= 5) {
+                  treck = 0; // То присваиваем treck ноль
+                  switchTreck(treck); // Меняем трек
+              }
+            }, 10)
+        });
+      
+      
+        btnPause.addEventListener("click", function() {
+          audio.pause(); // Останавливает песню
+          clearInterval(audioPlay) // Останавливает интервал
+        });
+      
+      
+        btnPrev.addEventListener("click", function() {
+              // Проверяем что переменная treck больше нуля
+              if (treck > 0) {
+                  treck--; // Если верно, то уменьшаем переменную на один
+                  switchTreck(treck); // Меняем песню.
+              } else { // Иначе
+                  treck = 5; // Присваиваем три
+                  switchTreck(treck); // Меняем песню
+              }
+          });
+      
+      
+        btnNext.addEventListener("click", function() {
+            // Проверяем что переменная treck больше трёх
+            if (treck < 5) { // Если да, то
+                treck++; // Увеличиваем её на один
+                switchTreck(treck); // Меняем песню 
+            } else { // Иначе
+                treck = 0; // Присваиваем ей ноль
+                switchTreck(treck); // Меняем песню
+            }
+        if(treck = 1) {
+          first.a.style.color='green'
+        } else {
+            first.a.style.color='white'
+        }
+        });
     </script>
   </body>
 </html>

@@ -18,7 +18,16 @@ include ../mixins/card.pug
       .header-track
           h2 New Single 
           h1 War For Love
-          img(src="./assets/imgs/header-track.png", alt="")
+          audio.h-aud(src="./assets/audio/war-love.mp3" controls)
+          .controls 
+            button.h-play
+            button.h-pause
+            button.h-prev 
+            button.h-next 
+            .h-audio-track
+              .h-time
+            
+
       .header-card  
           +card("./assets/imgs/header-1.png", "Working on my upcoming full-lenth album that`s releasing later this year.")
           +card("./assets/imgs/header-2.png", "Halloween vibes. <br>Listen my new track!")

@@ -51,10 +51,17 @@ include ../mixins/swiper-slide.pug
         .title
           img(src="./assets/imgs/visual.png", alt="")
           h2 Last tracks
-        img.time-line(src="./assets/imgs/main-track.png", alt="")
+        audio.aud(src="./assets/audio/war-love.mp3" controls)
+        .controls 
+          button.play
+          button.pause
+          button.prev 
+          button.next 
+          .audio-track
+            .time
         .track-list 
-          +track("01", "#", "3LAU, Bright Lights — How You Love Me")
-          +track("02", "#", "Bright Lights, Kaleena Zanders, Kandy — War For Love")
+          +track("01", "#", "Bright Lights, Kaleena Zanders, Kandy — War For Love")
+          +track("02", "#", "3LAU, Bright Lights — How You Love Me")
           +track("03", "#", "Pink Is Punk, Benny Benassi, Bright Lights — Ghost")
           +track("04", "#", "Hardwell, Dyro, Bright Lights — Never Say Goodbye")
           +track("05", "#", "Zeds Dead, Dirtyphonics, Bright Lights — Where Are You Now")

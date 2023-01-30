@@ -1,86 +1,87 @@
 
-.first-section{
-  margin-top: 323px;
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-  width: 100%;
-  .tex{
-    width: calc((100% - 30px)/2);
-    color: white;
-    .title{
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      h2{
-        font-size: 48px;
-        font-style: bold;
-        color: white;
-      }
-    }
-    p{
-      margin-top: 60px;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 16px;
-      font-style: normal;
-    }
-    .other-article{
-      margin-top: 67px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 30px 40px;
-      align-items: center;
-      a{
-        width: calc((100% - 40px)/2);
+  .first-section{
+    margin-top: 323px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    .tex{
+      width: calc((100% - 30px)/2);
+      color: white;
+      .title{
         display: flex;
-        text-decoration: none;
-        color: white;
-        gap: 20px;
-        h4{
-          font-size: 18px;
-          font-weight: 600;
+        align-items: center;
+        gap: 30px;
+        h2{
+          font-size: 48px;
+          font-style: bold;
+          color: white;
+        }
+      }
+      p{
+        margin-top: 60px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        font-style: normal;
+        border
+      }
+      .other-article{
+        margin-top: 67px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px 40px;
+        align-items: center;
+        a{
+          width: calc((100% - 40px)/2);
+          display: flex;
+          text-decoration: none;
+          color: white;
+          gap: 20px;
+          h4{
+            font-size: 18px;
+            font-weight: 600;
+            
+          }
+          
+          div{
+            width: 30px;
+            height: 30px;
+            background: rgba(122, 102, 204, 1);
+            border-radius: 10px 0 10px 0;
+            transition: 0.2s;
+          }
           
         }
-        
-        div{
-          width: 30px;
-          height: 30px;
-          background: rgba(122, 102, 204, 1);
-          border-radius: 10px 0 10px 0;
-          transition: 0.2s;
+        a:hover{
+          div{
+            background: rgb(119, 247, 176);
+          }
         }
         
       }
-      a:hover{
-        div{
-          background: rgb(119, 247, 176);
-        }
+    }
+    .photos{
+      width: calc((100% - 30px)/2);
+      position: relative;
+      img{
+        position: absolute;
+      }
+      .front{
+        left:93px;
+        top: 58px;
+        z-index: 1;
+      }
+      .back{
+        right: 0;
+        bottom: 60px;
+        z-index: 0;
+        opacity: 30%;
       }
       
     }
   }
-  .photos{
-    width: calc((100% - 30px)/2);
-    position: relative;
-    img{
-      position: absolute;
-    }
-    .front{
-      left:93px;
-      top: 58px;
-      z-index: 1;
-    }
-    .back{
-      right: 0;
-      bottom: 60px;
-      z-index: 0;
-      opacity: 30%;
-    }
-    
-  }
-}
 .second-section{
   margin-top: 235px;
   padding: 50px 80px;
